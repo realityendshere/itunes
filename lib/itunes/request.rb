@@ -6,7 +6,7 @@ module ITunes
 
     # Perform an HTTP GET request
     def request(request_type, params)
-      url = '/WebObjects/MZStoreServices.woa/wa/ws' + request_type
+      url = '/' + request_type.downcase
 
       response = connection.get do |req|
         req.url url, params
